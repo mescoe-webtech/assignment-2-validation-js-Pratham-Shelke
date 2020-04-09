@@ -1,0 +1,105 @@
+<html>
+   <head>
+      <title>Student Scholarship</title>
+      <script src="script.js"></script>
+   </head>
+   <body style="background-color: wheat;">
+      <h1>Student Scholarship Form</h1>
+      <form class="applyShcolar" name="applicationForm" >
+         <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fname">First name :</label> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <label for="mname">Middle name :</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <label for="mname">Last name :</label><br>
+            <input type="text" placeholder="First name" name="fname" required>&emsp;&emsp;&emsp;
+            <input type="text" placeholder="Middle name" name="mname" required>&emsp;&emsp;&emsp;&ensp;&nbsp;
+            <input type="text" placeholder="Last name" name="lname" required><br><br>
+            
+            <label for="adhar">Aadhar number :</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+            <label for="phnumber">Phone number :</label><br>
+            <input type="number" name="adharnumber" onblur="validateAdhar()" required>&emsp;&emsp;&nbsp;&ensp;&nbsp;         
+            <input type="number" name="phnumber" onblur="validatePhnumber()" required><br>
+            <span id="adhar_err" style="color: firebrick;"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;
+            <span id="ph_err" style="color: firebrick;"></span>
+            <br>
+
+            <label for="gender">Gender : </label>
+            <input type="radio" name="gender" value="male" >
+            <label for="male">Male</label> 
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label for="class">Class</label>
+            <select name="class" >
+               <option value="null">Select</option>
+               <option value="TE1">TE 1</option>
+               <option value="TE2">TE 2</option>
+               <option value="TESS">TE 2nd Shift</option>
+            </select> <br><br>
+
+            <label for="attendance">Attendance : </label>
+            <input type="text" name="attendance" style="width: 25px;" onblur="validateAttendance()" required>&ensp;%&emsp;&emsp;
+            <label for="cgpa">CGPA : </label>
+            <input type="text" name="cgpa" style="width: 40px;" required><br>
+            <span id="attend_err" style="color: firebrick;"></span>
+
+         </fieldset><br><br>
+         
+         <fieldset>
+            <legend>Scholarship Information</legend>
+            
+            <label for="income">Annual Income  :</label><br>
+            <input type="number" name="income" onblur="validateIncome()" required><br>
+            <span id="income_err" style="color: firebrick;"></span>
+            <br>
+
+            <label for="religion">Religion : </label>
+            <select name="religion" >
+               <option value="null">Select</option>
+               <option value="hindu">Hindu</option>
+               <option value="muslim">Muslim</option>
+               <option value="jain">Jain</option>
+               <option value="christian">Christian</option>
+               <option value="buddhist">Buddhist</option>
+            </select>&emsp;&emsp;&emsp;&emsp;
+
+            <label for="cast">Category : </label>
+            <select name="cast" >
+               <option value="null">Select</option>
+               <option value="open">OPEN</option>
+               <option value="ebc">OPEN(EBC)</option>
+               <option value="obc">OBC</option>
+               <option value="scst">SC/ST</option>
+               <option value="nt">NT</option>
+            </select><br><br>
+
+
+            <label for="Scholarship">Scholarship name</label>
+            <select name="scholarship" >
+               <option value="null">Select</option>
+               <option value="scholar1">Rajashri Chhatrapati Maharaj Shikshan Shulkh Shishyavrutti Yojna(EBC)</option>
+               <option value="scholar2">Dr Panjabrao Deshmukh Vatigruh Nirvah Bhatta Yojna(DTE)</option>
+               <option value="scholar3">Scholarship for OBC</option>
+            </select><br><br>
+
+            <label for="citizen">Citizen of India ?</label>
+            <input type="radio" name="citizen" value="yes">Yes
+            <input type="radio" name="citizen" value="no">No
+
+         </fieldset><br><br>
+         <fieldset>
+            <legend>Bank Information</legend>
+            <h4 style="color:red;">Note : Please enter of the account linked with your aadhar number</h4>
+            <label for="bname">Bank Name :</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <label for="branch">Branch Name:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <label for="ifsc">IFSC Code</label><br>
+            <input type="text" name="bname" placeholder="Bank Name">&emsp;&emsp;&emsp;&nbsp;
+            <input type="text" name="branch" placeholder="Branch Name">&emsp;&emsp;&ensp;
+            <input type="text" name="ifsc" placeholder="IFCS Code">
+         </fieldset>
+         
+         <input type="submit" value="Apply" style="background-color: darkseagreen; height: 30px; width: 70px;">
+         
+      </form>
+   </body>
+</html>
